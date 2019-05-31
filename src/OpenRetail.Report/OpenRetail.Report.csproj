@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0619DAD4-44FE-48AC-BCC9-6F1115574E1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenRetail.Report</RootNamespace>
+    <AssemblyName>OpenRetail.Report</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="DataSet\DsPembelian.cs">
+      <DependentUpon>DsPembelian.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DsPembelian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPembelian.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DsPengeluaranBiaya.cs">
+      <DependentUpon>DsPengeluaranBiaya.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DsPengeluaranBiaya.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPengeluaranBiaya.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DsPenjualan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPenjualan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DsStok.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsStok.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RvCustomerProduk.rdlc" />
+    <EmbeddedResource Include="RvKartuPiutangPenjualanProduk.rdlc" />
+    <EmbeddedResource Include="RvKartuStok.rdlc" />
+    <EmbeddedResource Include="RvKasbonDetail.rdlc" />
+    <EmbeddedResource Include="RvNotaPenjualanMiniPOSTanpaCustomer.rdlc" />
+    <EmbeddedResource Include="RvNotaPenjualanMiniPOS.rdlc" />
+    <EmbeddedResource Include="RvLabelNotaPenjualan.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RvNotaPenjualanProdukLabel.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RvNotaPenjualanProdukLabelDropship.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RvNotaPenjualanProdukTanpaLabelDropship.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RvNotaPenjualanProdukTanpaLabel.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RvNotaPembelianProduk.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RvPemasukanPengeluaran.rdlc" />
+    <EmbeddedResource Include="RvPembayaranPiutangPenjualanProdukDetail.rdlc" />
+    <EmbeddedResource Include="RvPembayaranPiutangPenjualanProdukHeader.rdlc" />
+    <EmbeddedResource Include="RvKasbonHeader.rdlc" />
+    <EmbeddedResource Include="RvGajiKaryawan.rdlc" />
+    <EmbeddedResource Include="RvPenjualanProdukPerGolonganDetail.rdlc" />
+    <EmbeddedResource Include="RvPenjualanProdukPerGolonganHeader.rdlc" />
+    <EmbeddedResource Include="RvPenjualanProdukPerKasir.rdlc" />
+    <EmbeddedResource Include="RvPenyesuaianStok.rdlc" />
+    <EmbeddedResource Include="RvPengeluaranBiaya.rdlc" />
+    <EmbeddedResource Include="RvProdukFavorit.rdlc" />
+    <EmbeddedResource Include="RvStokProdukAdmin.rdlc" />
+    <EmbeddedResource Include="RvStokProduk.rdlc" />
+    <EmbeddedResource Include="RvPiutangPenjualanProduk.rdlc" />
+    <EmbeddedResource Include="RvPiutangPenjualanProdukDetail.rdlc" />
+    <EmbeddedResource Include="RvPiutangPenjualanProdukHeader.rdlc" />
+    <EmbeddedResource Include="RvKartuHutangPembelianProduk.rdlc" />
+    <EmbeddedResource Include="RvPembayaranHutangPembelianProdukDetail.rdlc" />
+    <EmbeddedResource Include="RvHutangPembelianProdukDetail.rdlc" />
+    <EmbeddedResource Include="RvPembayaranHutangPembelianProdukHeader.rdlc" />
+    <EmbeddedResource Include="RvPenjualanProduk.rdlc" />
+    <EmbeddedResource Include="RvPenjualanProdukDetail.rdlc" />
+    <EmbeddedResource Include="RvPembelianProdukDetail.rdlc" />
+    <EmbeddedResource Include="RvHutangPembelianProdukHeader.rdlc" />
+    <EmbeddedResource Include="RvPenjualanProdukHeader.rdlc" />
+    <EmbeddedResource Include="RvReturPenjualanProdukDetail.rdlc" />
+    <EmbeddedResource Include="RvReturPembelianProdukDetail.rdlc" />
+    <EmbeddedResource Include="RvReturPenjualanProdukHeader.rdlc" />
+    <EmbeddedResource Include="RvReturPembelianProdukHeader.rdlc" />
+    <EmbeddedResource Include="RvPembelianProdukHeader.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet\DsPembelian.xsc">
+      <DependentUpon>DsPembelian.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsPembelian.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPembelian.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DsPembelian.xss">
+      <DependentUpon>DsPembelian.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsPengeluaranBiaya.xsc">
+      <DependentUpon>DsPengeluaranBiaya.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsPengeluaranBiaya.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPengeluaranBiaya.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DsPengeluaranBiaya.xss">
+      <DependentUpon>DsPengeluaranBiaya.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsPenjualan.xsc">
+      <DependentUpon>DsPenjualan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsPenjualan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPenjualan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DsPenjualan.xss">
+      <DependentUpon>DsPenjualan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsStok.xsc">
+      <DependentUpon>DsStok.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsStok.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsStok.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DsStok.xss">
+      <DependentUpon>DsStok.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

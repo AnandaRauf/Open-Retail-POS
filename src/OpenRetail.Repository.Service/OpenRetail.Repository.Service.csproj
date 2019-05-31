@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFEF9DEE-C608-4160-BAEC-1723185677F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenRetail.Repository.Service</RootNamespace>
+    <AssemblyName>OpenRetail.Repository.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.1.50.2\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Dapper.Contrib.1.50.0\lib\net40\Dapper.Contrib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Transaksi\PembayaranHutangProdukWebAPIRepository.cs" />
+    <Compile Include="Transaksi\PembayaranPiutangProdukWebAPIRepository.cs" />
+    <Compile Include="Transaksi\BeliProdukWebAPIRepository.cs" />
+    <Compile Include="Transaksi\JualProdukWebAPIRepository.cs" />
+    <Compile Include="Pengeluaran\GajiKaryawanWebAPIRepository.cs" />
+    <Compile Include="Pengeluaran\KasbonWebAPIRepository.cs" />
+    <Compile Include="Pengeluaran\PembayaranKasbonWebAPIRepository.cs" />
+    <Compile Include="Referensi\AlasanPenyesuaianStokWebAPIRepository.cs" />
+    <Compile Include="Referensi\CustomerWebAPIRepository.cs" />
+    <Compile Include="Referensi\DropshipperWebAPIRepository.cs" />
+    <Compile Include="Referensi\GolonganWebAPIRepository.cs" />
+    <Compile Include="Referensi\JabatanWebAPIRepository.cs" />
+    <Compile Include="Referensi\JenisPengeluaranWebAPIRepository.cs" />
+    <Compile Include="Referensi\KartuWebAPIRepository.cs" />
+    <Compile Include="Referensi\KaryawanWebAPIRepository.cs" />
+    <Compile Include="Pengeluaran\PengeluaranBiayaWebAPIRepository.cs" />
+    <Compile Include="Referensi\PenyesuaianStokWebAPIRepository.cs" />
+    <Compile Include="Referensi\ProdukWebAPIRepository.cs" />
+    <Compile Include="Referensi\AlasanPenyesuaianStokRepository.cs" />
+    <Compile Include="Referensi\SupplierWebAPIRepository.cs" />
+    <Compile Include="Transaksi\BeliProdukRepository.cs" />
+    <Compile Include="Transaksi\CetakNotaDummyRepository.cs" />
+    <Compile Include="Transaksi\CetakNotaRepository.cs" />
+    <Compile Include="Referensi\CustomerRepository.cs" />
+    <Compile Include="DapperContext.cs" />
+    <Compile Include="DatabaseVersionRepository.cs" />
+    <Compile Include="Referensi\DropshipperRepository.cs" />
+    <Compile Include="Transaksi\FooterNotaMiniPosRepository.cs" />
+    <Compile Include="Pengeluaran\GajiKaryawanRepository.cs" />
+    <Compile Include="Referensi\GolonganRepository.cs" />
+    <Compile Include="Referensi\HargaGrosirRepository.cs" />
+    <Compile Include="Transaksi\HeaderNotaMiniPosRepository.cs" />
+    <Compile Include="Transaksi\HeaderNotaRepository.cs" />
+    <Compile Include="Referensi\ItemMenuRepository.cs" />
+    <Compile Include="Referensi\JabatanRepository.cs" />
+    <Compile Include="Referensi\JenisPengeluaranRepository.cs" />
+    <Compile Include="Transaksi\JualProdukRepository.cs" />
+    <Compile Include="Referensi\KabupatenRajaOngkirRepository.cs" />
+    <Compile Include="Referensi\KartuRepository.cs" />
+    <Compile Include="Referensi\KaryawanRepository.cs" />
+    <Compile Include="Pengeluaran\KasbonRepository.cs" />
+    <Compile Include="Referensi\WilayahRepository.cs" />
+    <Compile Include="Transaksi\LabelNotaRepository.cs" />
+    <Compile Include="Log4NetRepository.cs" />
+    <Compile Include="Referensi\MenuRepository.cs" />
+    <Compile Include="Transaksi\MesinKasirRepository.cs" />
+    <Compile Include="Transaksi\PembayaranHutangProdukRepository.cs" />
+    <Compile Include="Pengeluaran\PembayaranKasbonRepository.cs" />
+    <Compile Include="Transaksi\PembayaranPiutangProdukRepository.cs" />
+    <Compile Include="Pengeluaran\PengeluaranBiayaRepository.cs" />
+    <Compile Include="Pengaturan\PenggunaRepository.cs" />
+    <Compile Include="Referensi\PenyesuaianStokRepository.cs" />
+    <Compile Include="Referensi\ProdukRepository.cs" />
+    <Compile Include="Pengaturan\ProfilRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ReportBeliProdukRepository.cs" />
+    <Compile Include="Report\ReportGajiKaryawanRepository.cs" />
+    <Compile Include="Report\ReportHutangBeliProdukRepository.cs" />
+    <Compile Include="Report\ReportJualProdukRepository.cs" />
+    <Compile Include="Report\ReportKartuHutangRepository.cs" />
+    <Compile Include="Report\ReportKartuPiutangRepository.cs" />
+    <Compile Include="Report\ReportKartuStokRepository.cs" />
+    <Compile Include="Report\ReportKasbonRepository.cs" />
+    <Compile Include="Report\ReportMesinKasirRepository.cs" />
+    <Compile Include="Report\ReportPemasukanPengeluaranRepository.cs" />
+    <Compile Include="Report\ReportPembayaranHutangBeliProdukRepository.cs" />
+    <Compile Include="Report\ReportPembayaranPiutangJualProdukRepository.cs" />
+    <Compile Include="Report\ReportPengeluaranBiayaRepository.cs" />
+    <Compile Include="Report\ReportPiutangJualProdukRepository.cs" />
+    <Compile Include="Report\ReportReturBeliProdukRepository.cs" />
+    <Compile Include="Report\ReportReturJualProdukRepository.cs" />
+    <Compile Include="Report\ReportStokProdukRepository.cs" />
+    <Compile Include="Transaksi\ReturBeliProdukRepository.cs" />
+    <Compile Include="Transaksi\ReturJualProdukRepository.cs" />
+    <Compile Include="Pengaturan\RolePrivilegeRepository.cs" />
+    <Compile Include="Pengaturan\RoleRepository.cs" />
+    <Compile Include="Pengaturan\SettingAplikasiRepository.cs" />
+    <Compile Include="Referensi\SupplierRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="WhereBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenRetail.Helper\OpenRetail.Helper.csproj">
+      <Project>{3316e651-8404-4cd4-a132-2b013489de67}</Project>
+      <Name>OpenRetail.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenRetail.Model\OpenRetail.Model.csproj">
+      <Project>{6b9cabad-1a6c-4323-8548-bd5f3c12613c}</Project>
+      <Name>OpenRetail.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenRetail.Repository.Api\OpenRetail.Repository.Api.csproj">
+      <Project>{981af3c6-f601-45ad-9f33-abbc7cc1f00f}</Project>
+      <Name>OpenRetail.Repository.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{981AF3C6-F601-45AD-9F33-ABBC7CC1F00F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenRetail.Repository.Api</RootNamespace>
+    <AssemblyName>OpenRetail.Repository.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Referensi\IAlasanPenyesuaianStokRepository.cs" />
+    <Compile Include="IBaseRepository.cs" />
+    <Compile Include="Transaksi\IBeliProdukRepository.cs" />
+    <Compile Include="Transaksi\ICetakNotaRepository.cs" />
+    <Compile Include="Referensi\ICustomerRepository.cs" />
+    <Compile Include="IDapperContext.cs" />
+    <Compile Include="IDatabaseVersionRepository.cs" />
+    <Compile Include="Referensi\IDropshipperRepository.cs" />
+    <Compile Include="Transaksi\IFooterNotaMiniPosRepository.cs" />
+    <Compile Include="Pengeluaran\IGajiKaryawanRepository.cs" />
+    <Compile Include="Referensi\IGolonganRepository.cs" />
+    <Compile Include="Referensi\IHargaGrosirRepository.cs" />
+    <Compile Include="Transaksi\IHeaderNotaMiniPosRepository.cs" />
+    <Compile Include="Transaksi\IHeaderNotaRepository.cs" />
+    <Compile Include="Referensi\IItemMenuRepository.cs" />
+    <Compile Include="Referensi\IJabatanRepository.cs" />
+    <Compile Include="Referensi\IJenisPengeluaranRepository.cs" />
+    <Compile Include="Transaksi\IJualProdukRepository.cs" />
+    <Compile Include="Referensi\IKabupatenRajaOngkirRepository.cs" />
+    <Compile Include="Referensi\IKartuRepository.cs" />
+    <Compile Include="Referensi\IKaryawanRepository.cs" />
+    <Compile Include="Pengeluaran\IKasbonRepository.cs" />
+    <Compile Include="Referensi\IWilayahRepository.cs" />
+    <Compile Include="Transaksi\ILabelNotaRepository.cs" />
+    <Compile Include="ILog4NetRepository.cs" />
+    <Compile Include="Referensi\IMenuRepository.cs" />
+    <Compile Include="Transaksi\IMesinKasirRepository.cs" />
+    <Compile Include="Transaksi\IPembayaranHutangProdukRepository.cs" />
+    <Compile Include="Pengeluaran\IPembayaranKasbonRepository.cs" />
+    <Compile Include="Transaksi\IPembayaranPiutangProdukRepository.cs" />
+    <Compile Include="Pengeluaran\IPengeluaranBiayaRepository.cs" />
+    <Compile Include="Pengaturan\IPenggunaRepository.cs" />
+    <Compile Include="Referensi\IPenyesuaianStokRepository.cs" />
+    <Compile Include="Referensi\IProdukRepository.cs" />
+    <Compile Include="Pengaturan\IProfilRepository.cs" />
+    <Compile Include="Transaksi\IReturBeliProdukRepository.cs" />
+    <Compile Include="Transaksi\IReturJualProdukRepository.cs" />
+    <Compile Include="Pengaturan\IRolePrivilegeRepository.cs" />
+    <Compile Include="Pengaturan\IRoleRepository.cs" />
+    <Compile Include="Pengaturan\ISettingAplikasiRepository.cs" />
+    <Compile Include="Referensi\ISupplierRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\IBaseReportRepository.cs" />
+    <Compile Include="Report\IReportBeliProdukRepository.cs" />
+    <Compile Include="Report\IReportGajiKaryawanRepository.cs" />
+    <Compile Include="Report\IReportHutangBeliProdukRepository.cs" />
+    <Compile Include="Report\IReportJualProdukRepository.cs" />
+    <Compile Include="Report\IReportKartuHutangRepository.cs" />
+    <Compile Include="Report\IReportKartuPiutangRepository.cs" />
+    <Compile Include="Report\IReportKartuStokRepository.cs" />
+    <Compile Include="Report\IReportKasbonRepository.cs" />
+    <Compile Include="Report\IReportMesinKasirRepository.cs" />
+    <Compile Include="Report\IReportPemasukanPengeluaranRepository.cs" />
+    <Compile Include="Report\IReportPembayaranHutangBeliProdukRepository.cs" />
+    <Compile Include="Report\IReportPembayaranPiutangJualProdukRepository.cs" />
+    <Compile Include="Report\IReportPengeluaranBiayaRepository.cs" />
+    <Compile Include="Report\IReportPiutangJualProdukRepository.cs" />
+    <Compile Include="Report\IReportReturBeliProdukRepository.cs" />
+    <Compile Include="Report\IReportReturJualProdukRepository.cs" />
+    <Compile Include="Report\IReportStokProdukRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenRetail.Model\OpenRetail.Model.csproj">
+      <Project>{6b9cabad-1a6c-4323-8548-bd5f3c12613c}</Project>
+      <Name>OpenRetail.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
